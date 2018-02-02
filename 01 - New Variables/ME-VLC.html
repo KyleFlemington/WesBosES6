@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		var width = 100;
+		console.log(width)
+
+		width = 200
+		console.log(width)
+
+		/*
+		Const is mutable. It can be reassigned values. Updated. Redefined.
+
+		Scoping:
+		'where are these variables to me'
+
+		 IF within a function, they are locally scoped. Only accesssible within the function
+
+
+		 If not within a function they are globally access - ie within the window.
+		*/
+
+
+		function setWidth() {
+			var widthF = 250;
+			console.log(widthF)
+		}
+		setWidth();
+ 
+
+
+		var age = 100;
+		if (age > 12) {
+			var dogYears = age * 7;
+
+			console.log(`You are ${dogYears} dog years old!`)
+		}
+
+
+		let height = 200;
+
+
+		/* Curly brackets = blocks.
+	
+		Const and let are confined to blocks
+		*/
+
+		/* dogYears undefined. not console logging */
+
+
+
+		/*let VS const*/
+
+		const key = 'abc123';
+		let points = 50;
+		let winner = false;
+
+
+
+
+
+	</script>
+
+
+</body>
+</html>
