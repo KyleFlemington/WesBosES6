@@ -5,5 +5,40 @@
 </head>
 <body>
 
+	<script type="text/javascript">
+			
+			/*  3 main benefits of arrow functions
+
+			1. More consice 
+			2. Implict returns - 
+			3. doesn't rebind the value of this
+
+
+			 */
+
+
+		const names = ['wes', 'kait', 'lux'];
+
+		const fullNames = names.map(function(name){
+				return `${name} bos`
+		});
+
+		console.log(fullNames)
+
+		/* map function iterates over each item in an array, allowing for something like the addition of more string */
+
+
+		const fullNames2 = names.map((name) => {
+			return `${name} bos`
+		})
+
+
+
+
+
+	</script>
+
+
+
 </body>
 </html>
