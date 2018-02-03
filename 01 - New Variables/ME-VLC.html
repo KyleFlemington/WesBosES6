@@ -75,6 +75,71 @@
 		/* let & const in the real world */
 
 		var name = 'Kyle';
+
+		/* the var Kyle is accessible in the console */
+
+
+		/* make and IFE  - a function that runs immediately*/
+
+		(function(){
+			var name2 = "Kyle";
+			console.log(name2)
+		})();
+
+
+		/* let and const are block scopes */
+
+		{
+		const name3 = 'Kyle'
+		}
+
+		/* name3 is undefined - locked in block scope */
+
+
+		for(var i =0; i < 10; i++) {
+			console.log(i);
+			setTimeout(function(){
+				console.log('the number is ' + i);
+			}, 1000)
+		}
+
+
+		/* Console logs the number is 10, 10 times, because ... */
+
+
+		for(let j=0; j < 10; j++) {
+			console.log(j);
+			setTimeout(function(){
+				console.log('the number is ' + j);
+			}, 1000);
+		}
+
+		/* Console logs the number is 1-9,  because const cannot be over written */
+
+		/* const cannot be used in a loop -- because it cannot be over written */
+
+
+		/* Temporal Dead Zone
+
+			A var can be accessed before it is declared. It's property cannot be accessed.
+
+		 */
+
+
+
+		 /* Is Var Dead? */
+
+
+		 console.log(pizza);
+		 const pizza = 'Deep Dish';
+
+		 /* use CONST by default
+				use LET if rebinding is needed - ie change properties -- mutable
+
+		  */
+
+
+
 	</script>
 
 
