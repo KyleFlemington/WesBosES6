@@ -61,21 +61,50 @@
   </div>
 
   <script>
+
     const box = document.querySelector('.box');
-    box.addEventListener('click', function() {
+
+        /* If this already has the class of opening, then on click, or 2nd click, switch the order of the class added attributes */
+
+
+    box.addEventListener('click', function(){
+
       let first = 'opening';
       let second = 'open';
 
-      if(this.classList.contains(first)) {
-        [first, second] = [second, first];
-      }
+      if(this.classList.contains(first)){
+        [first, second] = [second, first]
+      };
 
+
+      console.log(this);
       this.classList.toggle(first);
+      /* console logging the box on click 
+        
+        arrow function can not be used.
+        Selects the parent scope of 'this'
+
+        adds class of opening to 'this' - the box
+
+      */
+
       setTimeout(() => {
         console.log(this);
         this.classList.toggle(second);
-      }, 500);
-    });
+      }, 500)
+
+       /*
+      setTimeout(function(){
+          this.classList.toggle('open');
+
+          this will not work as per function within a function, and the function has not been bound to anything
+
+          arrow functions inherit this value from paretn
+      
+      */
+
+    })
+ 
   </script>
 
 </body>
