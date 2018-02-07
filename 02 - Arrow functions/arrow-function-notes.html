@@ -41,7 +41,33 @@
 
 
 
-		 /* Arrow functions are always anonymous functions */
+		 /* Arrow functions are always anonymous functions -- they can not have a name
+
+			you can use them as a variable
+
+		  */
+
+		  const race = '100m dash';
+		  const winners = ['Hunter Gath', 'Singa Song', 'Imda Bos'];
+
+		  /* use arrow function & map to return an object*/
+
+		  const win = winners.map((winner, i) => 
+		  	({
+		  		name: winner,
+		  		race: race,
+		  		place: i + 1
+		  	}) 
+		  )
+		  console.table(win)
+
+		  /* after fat arrow in order to return an object the {} must be surrounded by () */
+
+
+		  const ages = [23,62,45,234,2,62,75, 34]
+
+		  const old = ages.filter(age => age >= 60)
+		  console.log(old)
 
 
 	</script>
