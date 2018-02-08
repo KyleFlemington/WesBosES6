@@ -15,6 +15,55 @@
 
 	console.log(totalBill)
 
+
+	function calculateBill2 (total2, tax2, tip2) {
+
+		if(tax2 === undefined) {
+			tax2 = 0.13;
+		}
+
+		if(tip2 === undefined) {
+			tip2 = 0.15;
+		}
+		
+		return total2 + (total2 * tax2) + (total2 * tip2)
+
+	}
+	const totalBill2 = calculateBill2(100);
+	console.log(totalBill2)
+
+	/* sloppy code that needs refract*/
+
+
+	function calculateBill3(total3, tax3, tip3) {
+
+		tax3 = tax3 || 0.13;
+		tip3 = tip3 || 0.15;
+
+		return total3 + (total3 * tax3) + (total3 * tip3);
+	}
+
+	const totalBill3 = calculateBill3(100);
+	console.log(totalBill3);
+
+	/* still bad code. If there are too many arguements becomes hard to read for other devs */
+
+
+	function calculateBill4(total4, tax4 = 0.13, tip4 = 0.15) {
+		return total4 + (total4 * tax4) + (total4 * tip4)
+	}
+	const totalBill4 = calculateBill4(100);
+	console.log(totalBill4)
+
+	const totalBill5 = calculateBill4(100, undefined, 0.25);
+	console.log(totalBill5);
+
+	/* bill5 allows for the input of increased tip, and requires the specification of undefined -- because -- it's a syntax error that checks for someone passing something undefined  */
+
+
+
+
+
 </script>
 </body>
 </html>
