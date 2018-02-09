@@ -13,6 +13,67 @@
 
 <script>
 
+  const button = document.querySelector('#pushy');
+    
+    //button.addEventListener('click', () => {
+    
+    /* this = window --- if you use an arrow function, this is not bound to the function, rather 
+    the parent*/
+
+    button.addEventListener('click', function(){
+      console.log(this);
+      this.classList.toggle('on');
+    });
+
+
+  /* When you need a method to bind an object */
+
+  
+
+  /*const person = {
+    points: 23,
+    score: () => {
+      this.points++;
+    }
+  }
+  
+  this is within an arrow function. this refers the window
+  need old-school function
+
+  */
+
+  const person = {
+    points: 23,
+    score: function() {
+      console.log(this)
+      this.points++;
+    }
+  }
+
+
+  class Car {
+    constructor(make, colour) {
+      this.make = make;
+      this.colour = colour;
+    }
+  }
+
+  const beemer = new Car('bmw', 'blue');
+  const subie = new Car('Subaru', 'white');
+
+
+  Car.prototype.summarize = function() {
+    return `this car is a ${this.make} in the colour ${this.colour}`;
+  }
+
+
+  const orderChildren = function() {
+    const children = Array.from(arguments);
+    return children.map((child, i) => {
+      return `${child} was child #${i + 1}`;
+    })
+    console.log(arguments);
+  }
 
 
 </script>
