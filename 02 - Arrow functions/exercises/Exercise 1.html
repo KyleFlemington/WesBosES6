@@ -32,6 +32,13 @@
 <script>
 
   // Select all the list items on the page and convert to array
+  let array = []
+  let ul = document.getElementsByTagName("ul");
+  let list = document.getElementsByTagName("li");
+  for(var i=0; i < list.length; i++) {
+    array.push(i);
+    console.log(array)
+  }
 
   // Filter for only the elements that contain the word 'flexbox'
 
