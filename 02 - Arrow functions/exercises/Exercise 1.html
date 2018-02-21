@@ -41,12 +41,14 @@
   for(var i = 0; i < list.length; i++) {
       array.push(list[i])
   }
-  console.log(array)
 
   // Filter for only the elements that contain the word 'flexbox'
 
+  let filtered = array.filter(function (el) {
+    return el.innerHTML === "Flexbox Video" 
+  })
 
-
+  console.log(filtered)
   // map down to a list of time strings
 
   // map to an array of seconds
