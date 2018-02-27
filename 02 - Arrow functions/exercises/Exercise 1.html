@@ -49,13 +49,14 @@
   })
 
   console.log(filtered)
-
   // map down to a list of time strings
 
-  filtered.map(function(){
+  const strings = []
+  for(var i = 0; i < filtered.length; i++) {
+    strings.push(filtered[i].dataset.time)
+ }
+console.log(strings)
 
-
-  });
 
   // map to an array of seconds
 
