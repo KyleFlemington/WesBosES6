@@ -51,14 +51,24 @@
   console.log(filtered)
   // map down to a list of time strings
 
-  const strings = []
-  for(var i = 0; i < filtered.length; i++) {
-    strings.push(filtered[i].dataset.time)
- }
-console.log(strings)
+  let timeList = filtered.map(function(filtered){
+    return filtered.dataset.time
+  });
+
+  console.log(timeList)
 
 
   // map to an array of seconds
+
+  // for (var i = 0; i < timeList.length; i++) {
+  //   console.log(timeList[i]);
+  // }
+
+  let arraySeconds = timeList.map(function(timeList){
+    return timeList.split(':');
+  });
+  console.log( arraySeconds )
+
 
   // reduce to get total
 
