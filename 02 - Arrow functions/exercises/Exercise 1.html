@@ -48,14 +48,11 @@
     return el.innerHTML === "Flexbox Video" 
   })
 
-  console.log(filtered)
   // map down to a list of time strings
 
   let timeList = filtered.map(function(filtered){
     return filtered.dataset.time
   });
-
-  console.log(timeList)
 
 
   // map to an array of seconds
@@ -67,12 +64,12 @@
   let arraySeconds = timeList.map(function(timeList){
     return timeList.split(':').map(parseFloat);
   });
-  console.log( arraySeconds )
 
-  for(var i = 0; i < arraySeconds.length; i++) {
-      console.log( 
-        (arraySeconds[i][0] * 60) + arraySeconds[i][1])
-  }
+
+  const seconds = arraySeconds.map((item) => {
+    return (Number(item[0]) * 60) + Number(item[1]);
+  })
+  console.log(seconds)
   
 
   // reduce to get total
