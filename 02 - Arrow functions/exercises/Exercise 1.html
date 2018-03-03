@@ -69,10 +69,13 @@
   const seconds = arraySeconds.map((item) => {
     return (Number(item[0]) * 60) + Number(item[1]);
   })
-  console.log(seconds)
   
 
   // reduce to get total
+
+  let sum = seconds.reduce((a,b) => a + b, 0);
+
+  console.log(sum)
 
   // 🔥 This can also be done in a single .reduce(), but we're practicing arrow functions here, so chain them!
 
