@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div class="bio">
+		
+	</div>
+
+	<script type="text/javascript">
+		
+		const dictionary = {
+			HTML: 'Hyper Text Markup Language',
+			CSS: 'Cascading Style Sheets',
+			JS: 'javascript'
+		};
+
+		function addAbbreviation(stings,...values){
+			const abbreviated = values.map(value => {
+				if(dictionary[value]){
+					return `<abbr title="${dictionary[value]}">${value}</abbr>`
+				}
+				return value;
+			});
+			console.log(abbreviated);
+		};
+
+
+		const first = 'Kyle'
+		const last  = 'Flemington'
+
+		const sentence = addAbbreviation`Hello my name is ${first} ${last} and I love to code ${'HTML'}, ${'CSS'} and ${'JS'}`
+
+		const	bio = document.querySelector('.bio');
+		const p 	= document.createElement('p');
+
+		p.InnerHTML = sentence;
+		bio.appendChild(p)
+
+
+	</script>
+
+</body>
+</html>
