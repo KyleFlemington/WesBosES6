@@ -9,7 +9,7 @@
 		
 		const course 				= "RFB2";
 		const flightNumber 	= "20-AC2018-JZ";
-		const accountNumber = "593027406820"
+		const accountNumber = "59302740682RT0001"
 
 		const make 		= "BMW";
 		const model 	= "x5";
@@ -17,14 +17,34 @@
 
 // .startsWith()
 
+console.log(course.startsWith('RFB'));
+
+console.log(flightNumber.startsWith('AC'));
+console.log(flightNumber.startsWith('AC', 3));
+
 
 // .endsWith()
 
+console.log(flightNumber.endsWith('JZ'));
+console.log(accountNumber.endsWith('RT', 11));
 
 // .includes()
 
+console.log(flightNumber.includes('AC'));
+
 
 // .repeat()		
+
+function leftPad(str, length = 20) {
+	return `${' '.repeat(length - str.length)}${str}`;
+}
+
+
+console.log(leftPad(make));
+console.log(leftPad(model)); 
+console.log(leftPad(colour));
+
+
 
 	</script>
 
